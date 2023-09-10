@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Navigation from '../components/Navigation.astro';
+import bannerImage from '../assets/banner.gif';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Shoepatu | Tidak Perlu Kaya Untuk Bisa Bergaya">
 	<Navigation />
+
+  <div class="container mx-auto mt-16">
+    <div class="flex justify-between">
+      <div class="lg:w-[65%] bg-gradient-banner rounded-3xl px-5 py-10">
+        <img src={bannerImage.src} alt="banner-image" class="w-[497px] transform -scale-x-100">
+      </div>
+      <div class="lg:w-[30%] bg-gradient-banner rounded-3xl px-5 py-10">w</div>
+    </div>
+  </div>
 </Layout>
