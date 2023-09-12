@@ -4,15 +4,28 @@ import Navigation from '../components/Navigation.astro';
 import bannerImage from '../assets/banner.gif';
 ---
 
-<Layout title="Shoepatu | Tidak Perlu Kaya Untuk Bisa Bergaya">
+<Layout title="Bazoka.id | Tidak Perlu Kaya Untuk Bisa Bergaya">
 	<Navigation />
 
-  <div class="container mx-auto mt-16">
+  <div class="container mx-auto mt-16 font-primary">
     <div class="flex justify-between">
-      <div class="lg:w-[65%] bg-gradient-banner rounded-3xl px-5 py-10">
-        <img src={bannerImage.src} alt="banner-image" class="w-[497px] transform -scale-x-100">
+      <div class="flex justify-between items-center lg:w-[60%] bg-gradient-banner rounded-3xl px-5 py-10">
+        <div class="2xl:pl-20 xl:pl-16 pl-2 text-dark-primary">
+          <h1 class="2xl:text-3xl 2xl:leading-normal xl:text-2xl text-lg leading-normal font-semibold pb-4">
+            Upgrade status sosialmu disini.
+          </h1>
+          <p class="2xl:text-lg xl:text-base text-lg tracking-wide pb-7">Karena hidup cuma sekali, hamburkanlah hartamu disini</p>
+          <button class="flex items-center border rounded py-3 px-9 border-blue-primary text-blue-primary hover:bg-blue-primary hover:text-white ease-out duration-300">
+            <span class="pr-1">explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+        <img src={bannerImage.src} alt="banner-image" class="2xl:w-[520px] xl:w-[400px] w-[520px] transform -scale-x-100">
       </div>
-      <div class="lg:w-[30%] bg-gradient-banner rounded-3xl px-5 py-10">w</div>
+
+      <div class="lg:w-[35%] bg-gradient-banner rounded-3xl px-5 py-10">w</div>
     </div>
   </div>
 </Layout>

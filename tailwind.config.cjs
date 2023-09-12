@@ -8,9 +8,14 @@ module.exports = {
       },
       colors: {
         "gradient-banner": "#FFF3F0",
+        "blue-primary": "#5577F6",
+        "dark-primary": "#2C3E50",
       },
       scale: {
         "-100": "-1",
+      },
+      fontFamily: {
+        primary: "Poppins, sans-serif",
       },
     },
   },
