@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import bannerImage from '../assets/banner.gif';
+import populerShoe from '../assets/iklan.jpg';
 ---
 
 <Layout title="Bazoka.id | Tidak Perlu Kaya Untuk Bisa Bergaya">
 	<Navigation />
 
-  <div class="container mx-auto mt-16 font-primary">
+  <div class="xl:px-24 mt-16 font-primary">
     <div class="flex justify-between">
       <div class="flex justify-between items-center lg:w-[60%] bg-gradient-banner rounded-3xl px-5 py-10">
         <div class="2xl:pl-20 xl:pl-16 pl-2 text-dark-primary">
@@ -22,10 +23,12 @@ import bannerImage from '../assets/banner.gif';
             </svg>
           </button>
         </div>
-        <img src={bannerImage.src} alt="banner-image" class="2xl:w-[520px] xl:w-[400px] w-[520px] transform -scale-x-100">
+        <img src={bannerImage.src} alt="banner-image" class="xl:w-[400px] w-[520px] transform -scale-x-100">
       </div>
 
-      <div class="lg:w-[35%] bg-gradient-banner rounded-3xl px-5 py-10">w</div>
+      <div class="lg:w-[35%] text-dark-primary">
+        <img src={populerShoe.src} class="bg-cover rounded-3xl w-full" alt="">
+      </div>
     </div>
   </div>
 </Layout>
