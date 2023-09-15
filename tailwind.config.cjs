@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -10,6 +13,8 @@ module.exports = {
         "gradient-banner": "#FFF3F0",
         "blue-primary": "#5577F6",
         "dark-primary": "#2C3E50",
+        "brown-primary": "#603256",
+        "brown-hover": "#60325626",
       },
       scale: {
         "-100": "-1",
@@ -19,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

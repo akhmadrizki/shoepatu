@@ -2,7 +2,7 @@
 import astroImage from '../assets/logo.png'
 ---
 
-<header class="w-full bg-white drop-shadow-md py-3">
+<header class="w-full bg-white drop-shadow-md py-3 lg:block hidden">
     <div class="xl:px-24 flex justify-between">
       <nav class="flex items-center">
         <img src={astroImage.src} alt="" width="172" class="mr-28">
@@ -15,6 +15,95 @@ import astroImage from '../assets/logo.png'
       </nav>
 
       <div class="flex items-center">
+        <div class="mr-5">
+          <button type="button" class="relative inline-flex items-center px-3 py-2.5 text-sm font-medium text-center text-brown-primary rounded-full hover:bg-brown-hover" id="cart-menu-button" data-dropdown-toggle="cart-dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">2</div>
+          </button>
 
+          <!-- Dropdown menu -->
+          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow py-2 px-3" id="cart-dropdown">
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white">2 Items</span>
+              <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">Rp500.000</span>
+            </div>
+            <ul class="py-2" aria-labelledby="cart-menu-button">
+              <li class="bg-brown-primary rounded-xl">
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-brown-primary">Lihat Keranjang Belanja</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Dropdown menu -->
+        </div>
+
+        <div>
+          <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-8 h-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1609010697446-11f2155278f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="user photo">
+          </button>
+
+          <!-- Dropdown menu -->
+          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow" id="user-dropdown">
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white">Wayan Kopling</span>
+              <span class="text-sm  text-gray-500 flex dark:text-gray-400 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+
+                member setia
+              </span>
+            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">My Whishlist</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Pengaturan</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Keluar</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Dropdown menu -->
+        </div>
     </div>
 </header>
+
+
+<nav class="bg-white drop-shadow-md py-3 lg:hidden">
+  <div class="w-full flex flex-wrap items-center justify-between mx-auto xl:px-24 px-12">
+    <a href="#">
+        <img src={astroImage.src} alt="bazoka-logo" width="172">
+    </a>
+    <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full" id="navbar-hamburger">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-white ">
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-white bg-brown-primary rounded" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-dark-primary rounded hover:bg-gray-100">New</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-dark-primary rounded hover:bg-gray-100">Sneakers</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pl-3 pr-4 text-dark-primary rounded hover:bg-gray-100">T-Shirt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
