@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "375px",
+      },
       backgroundImage: {
         "gradient-banner": "linear-gradient(180deg, #FFF3F0 0%, #FFEFEC 100%)",
       },
