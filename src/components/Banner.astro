@@ -1,0 +1,34 @@
+---
+import populerShoe from '../assets/iklan.jpg';
+---
+
+<div class="flex sm:flex-row sm:justify-between flex-col">
+  <div class="flex items-center sm:w-[60%] w-full banner rounded-3xl px-5 py-10">
+    <div class="2xl:pl-20 xl:pl-16 pl-2 text-white">
+      <h1 class="2xl:text-3xl xl:text-3xl lg:text-2xl md:text-3xl sm:text-3xl text-2xl 2xl:leading-normal md:leading-relaxed leading-normal font-semibold pb-4">
+        Upgrade status sosialmu disini.
+      </h1>
+      <p class="2xl:text-lg xl:text-base text-base tracking-wide pb-7">
+        Karena hidup cuma sekali, hamburkanlah hartamu disini
+      </p>
+
+      <button class="flex items-center border rounded py-3 lg:px-9 px-7 border-white text-white hover:bg-blue-primary hover:text-white hover:border-blue-primary ease-out duration-300">
+        <span class="pr-1">explore</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+          <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="sm:w-[35%] sm:block hidden text-dark-primary">
+    <img src={populerShoe.src} class="bg-cover rounded-3xl w-full h-full object-cover" alt="">
+  </div>
+</div>
+
+<style>
+  .banner {
+    background-image: url('../assets/banner.jpg');
+    background-size: cover;
+  }
+</style>

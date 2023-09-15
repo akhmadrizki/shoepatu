@@ -1,33 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
-import populerShoe from '../assets/iklan.jpg';
+import Banner from '../components/Banner.astro';
 ---
 
 <Layout title="Bazoka.id | Tidak Perlu Kaya Untuk Bisa Bergaya">
 	<Navigation />
 
-  <div class="xl:px-24 mt-16 font-primary">
-    <div class="flex justify-between">
-      <div class="flex items-center lg:w-[60%] banner rounded-3xl px-5 py-10">
-        <div class="2xl:pl-20 xl:pl-16 pl-2 text-white">
-          <h1 class="2xl:text-3xl 2xl:leading-normal xl:text-2xl text-lg leading-normal font-semibold pb-4">
-            Upgrade status sosialmu disini.
-          </h1>
-          <p class="2xl:text-lg xl:text-base text-lg tracking-wide pb-7">Karena hidup cuma sekali, hamburkanlah hartamu disini</p>
-          <button class="flex items-center border rounded py-3 px-9 border-white text-white hover:bg-blue-primary hover:text-white hover:border-blue-primary ease-out duration-300">
-            <span class="pr-1">explore</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-              <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="lg:w-[35%] text-dark-primary">
-        <img src={populerShoe.src} class="bg-cover rounded-3xl w-full h-full object-cover" alt="">
-      </div>
-    </div>
+  <div class="xl:px-24 px-5 mx-auto md:mt-16 mt-10 font-primary">
+    <Banner />
 
     <div class="mt-16">
       <h1>Lorem ipsum dolor sit.</h1>
@@ -63,10 +44,6 @@ import populerShoe from '../assets/iklan.jpg';
 </Layout>
 
 <style>
-  .banner {
-    background-image: url('../assets/banner.jpg');
-    background-size: cover;
-  }
   .men {
     background-image: url('../assets/products/man.jpg');
     background-size: cover;
